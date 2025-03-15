@@ -10,6 +10,7 @@ flask --debug run
 
 ### Directory structure model
 
+```
 ctf-platform/
 │── app/                # Main application folder
 │   ├── static/         # CSS, JavaScript, Images
@@ -37,3 +38,4 @@ ctf-platform/
 │── .env                # Environment variables
 │── README.md           # Documentation
 
+```
