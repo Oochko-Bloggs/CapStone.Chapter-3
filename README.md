@@ -39,3 +39,10 @@ ctf-platform/
 │── README.md           # Documentation
 
 ```
+
+###If you want to change the database modify the models.py and run the migration script 
+
+```
+flask db migrate -m "Some comments here to let you partner know what happend"
+```
+
