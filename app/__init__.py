@@ -6,7 +6,6 @@ from flask_migrate import Migrate
 db = SQLAlchemy()
 login_manager = LoginManager()
 login_manager.login_view = "auth.login"
-
 migrate = Migrate()
 
 def create_app():
@@ -20,6 +19,8 @@ def create_app():
 
     # Import and register Blueprints
     from app.routes.auth import auth
+    from app.routes.main import main
     app.register_blueprint(auth)
+    app.register_blueprint(main)
 
     return app

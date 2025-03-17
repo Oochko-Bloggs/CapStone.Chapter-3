@@ -13,7 +13,7 @@ def register():
         email = request.form["email"]
         password = generate_password_hash(request.form["password"])
         
-        # Check if email or username already exists
+        # Check if email exists
         existing_user = User.query.filter_by(email=email).first()
         if existing_user:
             flash("Email already registered")
@@ -27,3 +27,6 @@ def register():
 
     return render_template("register.html")
 
+@auth.route("/login")
+def login():
+    return render_template("login.html")
